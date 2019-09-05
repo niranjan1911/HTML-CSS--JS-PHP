@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Log in</title>
+	<style >
+		.page{
+			/*height: 100vh;*/
+			width: 65vw;
+			border: 2px solid white;
+			margin-top: 10vh;
+			margin-left: 17vw;
+			/*background: radial-gradient(circle at 50%,rgb(255,255,255),rgb(50,50,50));*/
+		}
+		.input1{
+			height: 5vh;
+			width: 25vw;
+			margin-left: 5vw;
+			border-radius: 5px;
+			
+			
+		}
+		.input2{
+			height: 5vh;
+			width: 25vw;
+			margin-left: 5vw;
+			border-radius: 5px;
+		}
+		.input1:hover
+		{
+			box-shadow: 0 0 20px;
+		}
+		.input2:hover
+		{
+			box-shadow: 0 0 20px;
+		}
+		.button1{
+			height: 5vh;
+			width: 9vw;
+			border-radius: 10px;
+			font-size: 18px;
+			
+			margin-left: 4vw;
+
+
+			  background-color: #f4511e;
+			  border: none;
+			  color: #FFFFFF;
+			  text-align: center;
+			
+			  transition: all 0.5s;
+			  cursor: pointer;
+			 
+		}
+		.form1{
+		   width: 50vw;
+			margin-top: 10vh;
+			margin-left: 8vw;
+			background: #a8a59a;
+		}
+		a{
+			text-decoration: none;
+		}
+		.one{
+			background: #4caf50;
+			color: black;
+			border-radius: 5px;
+			height: 30px;
+			width: 80px;
+		}
+		.selecting
+		{
+			margin-left: 5vw;
+			/*width: 25px;
+			height: 10px;
+			font-size: 8px;*/
+		}
+		.selecting1
+		{
+			margin-left: 5vw;
+			width: 15	vw;
+			height: 5vh;
+			font-size: 15px;
+			border-radius: 5px;<span>
+		}
+		.text{
+			margin-left: 3vw;
+
+		}
+		.button1 span 
+		{
+		  cursor: pointer;
+		  display: inline-block;
+		  position: relative;
+		  transition: 0.5s;
+		}
+
+		.button1 span:after 
+		{
+		  content: '\00bb';
+		  position: absolute;
+		  opacity: 0;
+		  top: 0;
+		  right: -20px;
+		  transition: 0.5s;
+		}
+
+		.button1:hover span 
+		{
+		  padding-right: 25px;
+		}
+
+		.button1:hover span:after 
+		{
+		  opacity: 1;
+		  right: 0;
+		}
+		
+	</style>
+
+
+</head>
+<body style="transform: translate(-10px,-50px);">
+	
+	<div class="page">
+		     <!-- <h1 align="middle" style="color: white">Member Registration</h1>
+		     <img style="margin-left:27vw;height: 130px;width: 130px" src="man.png"> -->
+
+		<form name="form2" class="form1">
+
+		  <FIELDSET>	
+			  <legend style="font-size: 30px;">Sign up</legend>
+			  
+			<h4 class="text"> Name:</h4>
+			<input class="input1" id="name1" type="text" name="Full name" placeholder="Name">
+			&nbsp
+			<input type="button" onclick="handleReset('name1');" class="one" value="Reset">
+
+			<h4 class="text"> Username:</h4>
+			<input class="input1" id="username1" type="text" name="username" placeholder="Username">
+			&nbsp
+			<input type="button" onclick="handleReset('username1');" class="one" value="Reset">
+
+			<h4 class="text">Email:</h4>
+			<input class="input1" id="email1" type="email" name="email" placeholder="Email">
+			&nbsp
+			<input type="button" onclick="handleReset('email1');" class="one" value="Reset">
+
+			<h4 class="text">Contact:</h4>
+			<input class="input1" id="mobile1" type="text" name="contact" placeholder="Mobile number">
+			&nbsp
+			<input type="button" onclick="handleReset('mobile1');" class="one" value="Reset">
+
+			<h4 class="text">Date of birth:</h4>
+			<input class="input1" type="Date" id="DOB" name="dob" placeholder="DOB">
+			&nbsp
+			 <input type="button" onclick="handleReset('DOB');" class="one" value="Reset">
+
+			<h4 style="color: black" class="text">Gender:</h4>
+			<input class="selecting" type="radio" name="gender" value="male" checked> Male
+ 			<input class="selecting" type="radio" name="gender" value="female"> Female
+ 			
+ 		    <input class="selecting" type="radio" name="gender" value="other"> Other 
+
+ 		    <h4 class="text">Department:</h4>
+ 		    <select name="list" class="selecting1">
+ 		    	<option value="abc">--Select Department--</option>
+ 		    	<option value="it">Information Technology</option>
+ 		    	<option value="comp">Computer Science</option>
+ 		    	<option value="entc">ENTC</option>
+ 		    </select>
+
+			<h4 class="text">Password:</h4>
+			<input class="input2" id="pp1" type="Password" name="p1" placeholder="Password">
+			&nbsp
+			<input type="button" onclick="handleReset('pp1');" class="one" value="Reset">
+
+			<h4 class="text"> Confirm Password:</h4>
+			<input class="input2" id="pp2" type="Password" name="p2" placeholder="Confirm Password">&nbsp
+			<input type="button" onclick="handleReset('pp2');" class="one" value="Reset"></br></br>
+		
+			
+			<button type="submit" onclick=" return validateForm()" class="button1"><span>Submit</button>
+			<button class="button1" type="Reset"><span>Reset</span></button></br></br>
+		  </FIELDSET>	
+		</form>
+	</div>
+ <script src ="./valid.js"></script>
+</body>
+</html>

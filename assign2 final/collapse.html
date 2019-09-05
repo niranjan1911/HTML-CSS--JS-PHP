@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Collapse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .hii{
+            background-color: rgb(121, 117, 117);
+            color: rgb(0, 0, 0);
+            cursor:progress;
+            padding: 18px;
+            width: 40%;
+            text-align: left;
+            font-size: 15px;
+            margin-left: 28vw;
+        
+        }
+        .content{
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #c4bcbc;  
+            color: rgb(0, 0, 0);
+          
+
+        }
+        .active, .hii:hover {
+            background-color: rgb(149, 167, 129);
+         }
+         body{
+             background:#d4d4c0
+         }
+         a
+         {
+             text-decoration: none;
+         }
+         .abc
+         {
+             height: 5vh;
+             width: 7vw;
+             background: #63be47;
+             color: black
+         }
+    </style>
+</head>
+<body > 
+<button class="abc"><a href="homepage.html">Home</a></button>
+     <h2 align="middle">We are here to see Collapse Data Effect...</h2>
+<ul>
+    <button class="hii"><li>Copyright of Film</li></button>
+    <div class="content">
+
+        <p>Definition of the term Films as par UK copyright act s. 5B of the U.K. Act of 1988
+                (1) Film can be defined as a recording on any medium from which a moving image may by any means be produced.
+                
+                (2) The sound track accompanying a film shall be treated as part of the film.
+                
+                (3) Without prejudice to the generality of sub-sec. (2) where that sub­ section applies-
+                (a) References in this part to showing a film include playing the film sound track to accompany the film, and
+                (b) References to playing a sound recording do not include playing the film sound track to accompany the film.
+                
+                (4) Copyright does not exist in a film which is, or to the extent that it is a copy taken from a previous film.
+                
+                (5) Nothing in this section affects any copyright subsisting in a film sound track as a sound recording broadcasts.
+                
+                This definition encompasses all known means of recording visual images including film, videotape and disc.
+                
+                All recordings involving a moving image, including documentaries, full length feature films and television productions, will therefore be uses of film.
+                
+                Further, by defining a Film by reference to a moving image, the definition is capable of covering any new development in technology
+            </p>
+    </div>
+</br></br>
+    <button class="hii"><li>Copyright General Rule</li></button>
+    <div class="content">
+        <p>Copyright law provides for the principle, commonly called "fair use" that the reproduction of copyright works for certain limited, educational purposes, does not constitute copyright infringement. The Copyright Act establishes a four factor test, the "fair use test," to use to determine whether a use of a copyrighted work is fair use that does not require the permission of the copyright owner. The fair use test is highly fact specific, and much can turn on seemingly insignificant variations on the proposed use.
+
+            To determine whether a proposed use is a fair use, you must consider the following four factors, on which we elaborate more below:
+            
+                Purpose: The purpose and character of the use, including whether such use is of a commercial nature, or is for nonprofit education purposes.
+                Nature: The nature of the copyrighted work.
+                Amount: The amount and substantiality of the portion used in relation to the copyrighted work as a whole.
+                Effect: The effect of the use upon the potential market for, or value of, the copyrighted work.
+            </p>
+    </div>
+</br></br>
+    <button class="hii"><li>Copyright section 13(10)</li></button>
+    <div class="content">
+        <p>Section 13(10) of the U.K. Copyright Act of 1956 defines the term as follows:
+                Cinematograph film means any sequence of visual images recorded on material of any description (whether translucent or not) thereby can be capable of use of that material:-
+                (a) of being shown as a moving picture, or
+                (b) of being recorded on other material (whether translucent or not), by the use of which it can be shown.
+                This definition would appear to include video cassette tapes
+            </p>
+    </div>
+</ul>
+</br></br>
+    <script>
+            var coll = document.getElementsByClassName("hii");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) 
+            {
+              coll[i].addEventListener("click", function() 
+              {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") 
+                {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>
+
+</body>
+</html>
