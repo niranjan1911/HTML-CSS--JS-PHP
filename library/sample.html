@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>CRM Application Form</title>
+        <style type="text/css">
+            label.valid {
+                width: 24px;
+                height: 24px;
+                background: url(assets/img/valid.png) center center no-repeat;
+                display: inline-block;
+                text-indent: -9999px;
+            }
+
+            label.error {
+                font-weight: bold;
+                color: red;
+                padding: 2px 8px;
+                margin-top: 2px;
+            }
+
+        </style>
+    </head>
+
+    <body>  
+
+            <h1 style="text-align:center">CRM Application Form</h1>
+            <form>
+                <fieldset style="background-color:lightgray">
+                    <legend style="font-weight:600">Personal Information</legend>
+                    Date of Birth:
+                    <input type="date" id="DOB" name="DOB" required><br>
+                    Social Security #:
+                    <input type="text" id="SS#" name="SS#" value="" onchange="checkField(this.value)"><br>                    
+                    Location:
+                    <input type="text" id="Location" name="Location" /><br>
+                    Ethnicity:
+                    <input type="text" id="Ethnicity" name="Ethnicity" /><br />
+                    Citizenship:
+                    <input type="radio" id="Yes" name="Yes" value="Yes" />Yes
+                    <input type="radio" id="No" name="No" value="No" />No<br />
+                    Gender:
+                    <input type="text" id="Gender" name="Gender" /><br />
+                    Marital Status:
+                    <input type="text" id="Marital Status" name="Marital Status" /><br />
+                    Previous Last Name:
+                    <input type="text" id="PLN" name="PLN" /><br />
+                </fieldset>
+                <fieldset style="background-color:lightgray">
+                    <legend style="font-weight:600">Contact Information</legend>
+                    Address:
+                    <input type="text" id="Address" name="Address" required><br />
+                    Email:
+                    <input type="email" id="email" name="email" required><br />
+                </fieldset>
+                <fieldset style="background-color:lightgray">
+                    <legend style="font-weight:600">Education</legend>
+                    Education History:
+                    <input type="text" id="EH" name="EH" /><br />
+                    Academic Level:
+                    <input type="text" id="AL" name="AL" /><br />
+                </fieldset>
+                <fieldset style="background-color:lightgray">
+                    <legend style="font-weight:600">Other Information</legend>
+                    Military Status:
+                    <input type="text" id="MS" name="MS" /><br />
+                    POI:
+                    <input type="text" id="POI" name="POI" /><br>
+                    Employment Goal:
+                    <input type="text" id="EG" name="EG" /><br />
+                    Program:
+                    <input type="text" id="Program" name="Program" /><br />
+                    Market Segment:
+                    <input type="text" id="Mkt" name="Mkt" /><br />
+                    FA:
+                    <input type="checkbox" id="FA" name="FA" />
+                    Payment:
+                    <input type="checkbox" id="Payment" name="Payment" /><br />
+                    Notes:<br />
+                    <textarea id="Notes" name="Notes"> </textarea><br />
+                </fieldset>
+                <input type="submit" />
+
+            </form>
+
+</body>
+
+    </html>
