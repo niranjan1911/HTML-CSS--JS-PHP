@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Log in</title>
+	<style >
+		.page{
+			/*height: 100vh;*/
+			width: 98vw;
+			/*border: 2px solid white;*/
+			margin-top: 10vh;
+			margin-left: 25vw;
+			/*background: radial-gradient(circle at 50%,rgb(255,255,255),rgb(50,50,50));*/
+		}
+		.input1{
+			height: 5vh;
+			width: 25vw;
+			margin-left: 5vw;
+			border-radius: 5px;
+			
+			
+		}
+		.input2{
+			height: 5vh;
+			width: 25vw;
+			margin-left: 5vw;
+			border-radius: 5px;
+		}
+		.input1:hover
+		{
+			
+			box-shadow: 0 0 20px white;
+		}
+		.input2:hover
+		{
+			
+			box-shadow: 0 0 20px white;
+		}
+		.text1{
+			height: 10vh;
+			width: 25vw;
+			margin-left: 5vw;
+			border-radius: 5px;
+		}
+		.text1:hover{
+			
+			box-shadow: 0 0 20px white;
+		}
+		.button1{
+			height: 5vh;
+			width: 9vw;
+			border-radius: 10px;
+			font-size: 18px;
+			
+			margin-left: 5vw;
+
+
+			  background-color: #f4511e;
+			  border: none;
+			  color: #FFFFFF;
+			  text-align: center;
+			
+			  transition: all 0.5s;
+			  cursor: pointer;
+			 
+		}
+		.abcd
+		{
+			height: 30px;
+			width: 25px;
+			margin-right: 10px;
+			display: none;
+		}
+		.form1{
+		   width: 49vw;
+			margin-top: 10vh;
+			margin-left: 1vw;
+			background: radial-gradient(circle at 50%,rgb(0,150,255),rgb(0,0,0));
+		}
+		a{
+			text-decoration: none;
+		}
+		.one{
+			background: #4caf50;
+			color: black;
+			border-radius: 5px;
+			height: 30px;
+			width: 80px;
+		}
+		.selecting
+		{
+			margin-left: 5vw;
+			/*width: 25px;
+			height: 10px;
+			font-size: 8px;*/
+		}
+		.selecting1
+		{
+			margin-left: 5vw;
+			width: 15	vw;
+			height: 5vh;
+			font-size: 15px;
+			border-radius: 5px;<span>
+		}
+		.text{
+			margin-left: 3vw;
+			color: #b0c95b;
+
+		}
+		.button1 span 
+		{
+		  cursor: pointer;
+		  display: inline-block;
+		  position: relative;
+		  transition: 0.5s;
+		}
+
+		.button1 span:after 
+		{
+		  content: '\00bb';
+		  position: absolute;
+		  opacity: 0;
+		  top: 0;
+		  right: -20px;
+		  transition: 0.5s;
+		}
+
+		.button1:hover span 
+		{
+		  padding-right: 25px;
+		}
+
+		.button1:hover span:after 
+		{
+		  opacity: 1;
+		  right: 0;
+		}
+		legend,fieldset{
+			border-radius: 10px;
+
+		}
+		
+	</style>
+
+
+</head>
+<body style="transform: translate(-10px,-50px);background: #bf7a19">
+	
+	<div class="page">
+		     <!-- <h1 align="middle" style="color: white">Member Registration</h1>
+		     <img style="margin-left:27vw;height: 130px;width: 130px" src="man.png"> -->
+
+		<form name="form2" class="form1">
+
+		  <FIELDSET>
+
+			  <legend style="font-size: 30px;color: #a67c23">Sign up</legend>
+			 <FIELDSET> 
+			 	<legend style="font-size: 20px;color: white;text-align: center;">Personal details</legend>
+			<h4 class="text"> Name:</h4>
+			<input class="input1" id="name1" type="text" name="Full_name" placeholder="Name" autocomplete="off" autofocus="" onkeyup="myName()">
+			&nbsp
+			
+
+			<h4 class="text">Date of birth:</h4>
+			<input class="input1" type="Date" id="DOB" name="dob" placeholder="DOB" onclick="getAge();">
+			&nbsp
+			 
+			
+			<h4  class="text">Gender:</h4>
+			<input class="selecting" type="radio" name="gender" value="male" checked> <font style="color: rgb(180,180,180)">Male</font>
+ 			<input class="selecting" type="radio" name="gender" value="female"> <font style="color: rgb(180,180,180);">Female</font>
+ 			
+ 		    <input class="selecting" type="radio" name="gender" value="other"> <font style="color: rgb(180,180,180)">Other</font> 
+
+ 		    <h4 class="text">Department:</h4>
+ 		    <select name="list" id="list1" class="selecting1">
+ 		    	<option value="abc">--Select Department--</option>
+ 		    	<option value="it">Information Technology</option>
+ 		    	<option value="comp">Computer Science</option>
+ 		    	<option value="entc">ENTC</option>
+ 		    </select>
+
+ 		    <h4 class="text">Address:</h4>
+			<input class="text1" id="add" type="text" name="Address" placeholder="Address with Pincode" autocomplete="off">
+			&nbsp
+			
+
+			<h4 class="text">Field of Interest:</h4>
+ 		    <select name="list" class="selecting1">
+ 		    	<option value="abc">--Select Field--</option>
+ 		    	<option value="it">Bollywood</option>
+ 		    	<option value="comp">Hollywood</option>
+ 		    	<option value="entc">Marathi</option>
+ 		    	<option value="marathi">Any other</option>
+ 		    </select>
+            <input style="margin-left: 20vw;" type="button" onclick="var arg=['name1','DOB','add'];handleReset(arg);" class="one" value="Reset">
+			</FIELDSET></br>
+
+ 		    <FIELDSET> 
+			 	<legend style="font-size: 20px;color: white;text-align: center;">Contact details</legend>
+			<h4 class="text">Email:</h4>
+			<input class="input1" id="email1" type="email" name="email" placeholder="Email" autocomplete="off">
+			&nbsp
+			
+
+			<h4 class="text">Contact:</h4>
+			<input class="input1" id="mobile1" type="text" name="contact" placeholder="Mobile number" autocomplete="off" onkeyup="myFunc()">
+			<img id="show" src="right.png" class="abcd">
+			<img id="hide" src="wrong.png" class="abcd">
+			
+            <input style="margin-left: 34.5vw;" type="button"  onclick="var arg=['email1','mobile1'];handleReset(arg);" class="one" value="Reset">
+			
+ 		    </FIELDSET></br>
+ 		    
+
+ 		    <FIELDSET> 
+			 	<legend style="font-size: 20px;color: white;text-align: center;">Account details</legend>
+ 		    <h4 class="text"> Username:</h4>
+			<input class="input1" id="username1" type="text" name="username" placeholder="Username">
+			&nbsp
+			
+
+			<h4 class="text">Password:</h4>
+			<input class="input2" id="pp1" type="Password" name="p1" placeholder="Password">
+			&nbsp
+			
+
+			<h4 class="text"> Confirm Password:</h4>
+			<input class="input2" id="pp2" type="Password" name="p2" placeholder="Confirm Password">&nbsp
+			<input style="margin-left: 34.5vw;" type="button" onclick="var arg=['username1','pp1','pp2'];handleReset(arg);" class="one" value="Reset">
+			</FIELDSET>
+
+			</br></br>
+			<button type="submit" onclick=" return validateForm()" class="button1" ><span>Submit</button>
+			<button class="button1" type="Reset"><span>Reset</span></button></br></br>
+		  </FIELDSET>	
+		</form>
+	</div>
+ <script src ="./valid.js"></script>
+</body>
+</html>
